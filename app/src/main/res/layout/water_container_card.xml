@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_WaterContainer"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textViewTitleAguaAlamacenada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agua almacenada"
+            android:textAlignment="center"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/circleLoadView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTitleAguaAlamacenada"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:wlv_borderColor="@color/medium_gray"
+            app:wlv_borderWidth="1dp"
+            app:wlv_progressValue="60"
+            app:wlv_shapeType="circle"
+            app:wlv_titleCenter="60%"
+            app:wlv_waveAmplitude="12"
+            app:wlv_waveColor="@color/water_color"
+            app:wlv_wave_background_Color="@color/white" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

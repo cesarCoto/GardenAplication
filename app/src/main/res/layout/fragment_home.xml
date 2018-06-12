@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_eee"
+    android:layout_margin="8dp"
+    tools:context=".HomeFragment">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardWeather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_below="@id/cardWeather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        <include
+            android:id="@+id/cardView_WaterContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            layout="@layout/water_container_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cardView_Humedad"/>
+
+
+        <include
+            android:id="@+id/cardView_Humedad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            layout="@layout/humedad_card"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardView_WaterContainer"/>
+
+
+
+            <include android:id="@+id/cardView_Temperatura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/temperatura_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView_WaterContainer"
+                app:layout_constraintEnd_toStartOf="@id/cardView_Humedad"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_Humedad"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/humedad_card"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textViewTitleHumedad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Humedad relativa del suelo"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="center"/>
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/humedad_suelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTitleHumedad"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:donut_unfinished_color="#f15959"
+            app:donut_progress="50.4"
+            app:donut_circle_starting_degree="90"/>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

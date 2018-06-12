@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    tools:context=".WaterContainerFragment">
+
+
+   <android.support.v7.widget.CardView
+       android:id="@+id/cardView_WaterContainer"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:cardBackgroundColor="@color/cardview_light_background"
+       app:cardUseCompatPadding="true"
+       app:cardElevation="2dp"
+       app:cardCornerRadius="4dp">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:padding="16dp">
+
+         <me.itangqi.waveloadingview.WaveLoadingView
+             android:id="@+id/circleLoadView"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             app:wlv_wave_background_Color="@color/white"
+             app:wlv_shapeType="circle"
+             app:wlv_borderColor="@color/medium_gray"
+             app:wlv_waveColor="@color/water_color"
+             app:wlv_waveAmplitude="20"
+             app:wlv_titleCenter="60%"
+             app:wlv_progressValue="60"
+             app:wlv_borderWidth="2dp"/>
+
+      </RelativeLayout>
+
+   </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
